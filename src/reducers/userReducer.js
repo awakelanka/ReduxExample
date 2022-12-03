@@ -1,9 +1,7 @@
 import { LOGOUT, LOGIN, SET_USER } from "../constants/actionTypes";
 
 const initialState = {
-  user: {
-    name: "Awake"
-  },
+  user: {},
   loggedIn: false
 };
 
@@ -12,18 +10,17 @@ const userReducer = (state = initialState, action) => {
     case LOGIN:
       return {
         ...state,
-        loggedIn: true
+        loggedIn: true,
+        user: {
+          name: 'Awake'
+        }
       };
     case LOGOUT:
       return {
         ...state,
         loggedIn: false
       };
-    case SET_USER:
-      return {
-        ...state,
-        user: action.payload?.user || {}
-      };
+      
     default:
       return state;
   }

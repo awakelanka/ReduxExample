@@ -6,3 +6,18 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.counter {
+  margin-top: 2em;
+  width: 50%;
+}
+
+.counter h1 {
+  text-align: center;
+}
+
+.counter .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
